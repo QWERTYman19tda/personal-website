@@ -93,5 +93,5 @@ while true; do
   ## 4. the handleRequest function processes the request message and routes it to the response handler, which writes to the FIFO
   ## 5. as soon as the FIFO receives a message, it's sent to the socket
   ## 6. closes the connection (`-N`), closes the socket and repeat the loop
-  cat response | nc -l 3000 | handleRequest
+  cat response | nc -l 80 | handleRequest
 done
